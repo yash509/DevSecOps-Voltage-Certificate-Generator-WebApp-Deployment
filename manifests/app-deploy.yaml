@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lms-system-deployment
+  name: vltge-crtfct-deployment
 spec:
-  replicas: 3 # You can adjust the number of replicas as needed
+  replicas: 6 # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: lms-system
+      app: vltge-crtfct
   template:
     metadata:
       labels:
-        app: lms-system
+        app: vltge-crtfct
     spec:
       containers:
-        - name: lms-system
-          image: yash5090/lms-system:latest # Replace with the actual image tag
+        - name: vltge-crtfct
+          image: yash5090/vltge-crtfct:latest # Replace with the actual image tag
           ports:
-            - containerPort: 5000 # Replace with the port your Tetris game listens on
+            - containerPort: 3000 # Replace with the port your Tetris game listens on
