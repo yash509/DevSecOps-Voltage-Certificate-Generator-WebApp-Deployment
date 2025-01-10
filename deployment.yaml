@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: vltge-crtfct-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: vltge-crtfct
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: vltge-crtfct
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: vltge-crtfct
+        image: yash5090/vltge-crtfct:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
